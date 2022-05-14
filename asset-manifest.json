@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/rick-and-morty-browser/static/js/main.dc31985d.js",
+    "static/js/787.e6e489f6.chunk.js": "/rick-and-morty-browser/static/js/787.e6e489f6.chunk.js",
+    "index.html": "/rick-and-morty-browser/index.html",
+    "main.dc31985d.js.map": "/rick-and-morty-browser/static/js/main.dc31985d.js.map",
+    "787.e6e489f6.chunk.js.map": "/rick-and-morty-browser/static/js/787.e6e489f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.dc31985d.js"
+  ]
+}

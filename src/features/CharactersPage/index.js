@@ -1,25 +1,26 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchCharacters,
+  selectCharactersList,
+  selectCharactersStatus,
+} from "./charactersSlice";
 
 export const CharactersPage = () => {
-  const [data, setData] = useState([]);
+  const dispatch = useDispatch();
+  const characters = useSelector(selectCharactersList);
+  const status = useSelector(selectCharactersStatus);
 
   useEffect(() => {
-    const getData = async (url) => {
-      try {
-        url = "https://rickandmortyapi.com/api/character/?page=2";
+    dispatch(fetchCharacters());
+  }, [dispatch]);
+  console.log(characters);
 
-        const response = await axios.get(url);
-        setData(response.data);
-        console.log(data);
-      } catch (error) {
-        console.error("Sth bad happened", error);
-      }
-    };
-    setTimeout(getData, 300);
-  }, []);
-
-  console.log(data);
-
-  return <>test</>;
+  return status === "success" ? (
+    <ul>
+      {characters.map((character) => (
+        <li key={character.id}>{character.name}</li>
+      ))}
+    </ul>
+  ) : null;
 };

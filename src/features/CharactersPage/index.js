@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { StatusChecker } from "../../common/StatusChecker";
 import {
   fetchCharacters,
   selectCharactersList,
@@ -16,11 +17,13 @@ export const CharactersPage = () => {
   }, [dispatch]);
   console.log(characters);
 
-  return status === "success" ? (
-    <ul>
-      {characters.map((character) => (
-        <li key={character.id}>{character.name}</li>
-      ))}
-    </ul>
-  ) : null;
+  return (
+    <StatusChecker status={status}>
+      <ul>
+        {characters.map((character) => (
+          <li key={character.id}>{character.name}</li>
+        ))}
+      </ul>
+    </StatusChecker>
+  );
 };

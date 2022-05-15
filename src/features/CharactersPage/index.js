@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { CharacterTile } from "../../common/CharacterTile";
 import { StatusChecker } from "../../common/StatusChecker";
 import {
   fetchCharacters,
@@ -22,9 +22,12 @@ export const CharactersPage = () => {
     <StatusChecker status={status}>
       <ul>
         {characters.map((character) => (
-          <Link key={character.id} to={`/characters/${character.id}`}>
-            <li>{character.name}</li>
-          </Link>
+          <CharacterTile
+            key={character.id}
+            id={character.id}
+            name={character.name}
+            image={character.image}
+          />
         ))}
       </ul>
     </StatusChecker>

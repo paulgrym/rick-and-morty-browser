@@ -7,6 +7,9 @@ import {
   selectCharacterDetails,
   selectCharacterDetailsStatus,
 } from "./characterDetailsSlice";
+import { Image, Info, MetaData, Container, Description, Term } from "./styled";
+import { Title } from "../../../common/Title";
+import { Section } from "../../../common/Section";
 
 export const CharacterDetails = () => {
   const dispatch = useDispatch();
@@ -20,13 +23,34 @@ export const CharacterDetails = () => {
     dispatch(fetchCharacterDetails(id));
   }, [id, dispatch]);
 
+  const metaData = [
+    { term: "Name", description: character.name },
+    { term: "Status", description: character.status },
+    { term: "Species", description: character.species },
+    { term: "Type", description: character.type },
+    { term: "Gender", description: character.gender },
+    { term: "Origin", description: character.origin?.name },
+    { term: "Location", description: character.location?.name },
+  ];
+
   return (
     <StatusChecker status={status}>
-      <p>Name: {character.name || "Unknown"}</p>
-      <p>Status: {character.status || "Unknown"}</p>
-      <p>Species: {character.species || "Unknown"}</p>
-      <p>Type: {character.type || "Unknown"}</p>
-      <p>Gender: {character.gender || "Unknown"}</p>
+      <Section>
+        <Title>{character.name || "unknown"}</Title>
+        <Container>
+          <Info>
+            <Image src={character.image} />
+            <div>
+              {metaData.map((data) => (
+                <MetaData>
+                  <Term>{data.term}:</Term>
+                  <Description>{data.description || "unknown"}</Description>
+                </MetaData>
+              ))}
+            </div>
+          </Info>
+        </Container>
+      </Section>
     </StatusChecker>
   );
 };

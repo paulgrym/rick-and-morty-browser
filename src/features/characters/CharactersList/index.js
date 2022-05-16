@@ -6,6 +6,7 @@ import { Section } from "../../../common/Section";
 import { StatusChecker } from "../../../common/StatusChecker";
 import { Title } from "../../../common/Title";
 import {
+  addCharacterToFavourites,
   fetchCharactersList,
   selectCharactersList,
   selectCharactersListStatus,
@@ -19,7 +20,6 @@ export const CharactersList = () => {
   useEffect(() => {
     dispatch(fetchCharactersList());
   }, [dispatch]);
-  console.log(characters);
 
   return (
     <Section>
@@ -32,6 +32,11 @@ export const CharactersList = () => {
               id={character.id}
               name={character.name}
               image={character.image}
+              character={character}
+              onButtonClick={() =>
+                dispatch(addCharacterToFavourites(character))
+              }
+              content="Add to favourites"
             />
           ))}
         </ListWrapper>

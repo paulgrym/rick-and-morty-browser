@@ -8,7 +8,7 @@ import {
 } from "./charactersListSlice";
 
 function* fetchCharactersListWorker() {
-  const url = `${API_URL}/?page=2`;
+  const url = `${API_URL}/?page=1`;
   try {
     yield delay(300);
     const characters = yield call(getAPI, url);

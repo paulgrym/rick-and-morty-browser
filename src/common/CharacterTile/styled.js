@@ -11,6 +11,10 @@ export const ListItem = styled.li`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    max-width: 250px;
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -25,6 +29,7 @@ export const Image = styled.img`
   border-radius: 5px;
 `;
 
-export const Title = styled.p`
+export const Title = styled.header`
   margin: 0;
+  font-size: 18px;
 `;

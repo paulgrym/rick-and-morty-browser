@@ -13,5 +13,7 @@ export const Title = styled.h1`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     text-align: center;
+    font-size: 24px;
+    margin: 24px 0 8px;
   }
 `;

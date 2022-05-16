@@ -13,5 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     overflow-y: scroll;
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.black};
   }
 `;

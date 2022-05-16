@@ -1,6 +1,6 @@
 import { delay, call, put, takeLatest } from "redux-saga/effects";
-import { API_URL } from "../APIdata";
-import { getAPI } from "../getAPI";
+import { API_URL } from "../../APIdata";
+import { getAPI } from "../../getAPI";
 import {
   fetchCharacterDetails,
   fetchCharacterDetailsError,

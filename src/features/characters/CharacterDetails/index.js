@@ -1,20 +1,20 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { StatusChecker } from "../../common/StatusChecker";
+import { StatusChecker } from "../../../common/StatusChecker";
 import {
   fetchCharacterDetails,
   selectCharacterDetails,
-  selectCharacterStatus,
+  selectCharacterDetailsStatus,
 } from "./characterDetailsSlice";
 
-export const CharacterPage = () => {
+export const CharacterDetails = () => {
   const dispatch = useDispatch();
 
   const { id } = useParams();
 
   const character = useSelector(selectCharacterDetails);
-  const status = useSelector(selectCharacterStatus);
+  const status = useSelector(selectCharacterDetailsStatus);
 
   useEffect(() => {
     dispatch(fetchCharacterDetails(id));

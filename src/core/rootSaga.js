@@ -1,7 +1,7 @@
 import { all } from "redux-saga/effects";
-import { watchFetchCharacterDetails } from "../features/CharacterPage/characterDetailsSaga";
-import { watchFetchCharacters } from "../features/CharactersPage/charactersSaga";
+import { watchFetchCharacterDetails } from "../features/characters/CharacterDetails/characterDetailsSaga";
+import { watchFetchCharactersList } from "../features/characters/CharactersList/charactersListSaga";
 
 export default function* rootSaga() {
-  yield all([watchFetchCharacters(), watchFetchCharacterDetails()]);
+  yield all([watchFetchCharactersList(), watchFetchCharacterDetails()]);
 }

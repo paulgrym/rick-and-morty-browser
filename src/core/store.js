@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { charactersReducer } from "../features/CharactersPage/charactersSlice";
-import { characterDetailsReducer } from "../features/CharacterPage/characterDetailsSlice";
+import { charactersListReducer } from "../features/characters/CharactersList/charactersListSlice";
+import { characterDetailsReducer } from "../features/characters/CharacterDetails/characterDetailsSlice";
 import rootSaga from "./rootSaga";
 import createSagaMiddleware from "redux-saga";
 
@@ -8,7 +8,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
   reducer: {
-    characters: charactersReducer,
+    charactersList: charactersListReducer,
     characterDetails: characterDetailsReducer,
   },
   middleware: [sagaMiddleware],

@@ -33,6 +33,7 @@ const selectCharacter = (state) => state.characterDetails;
 
 export const selectCharacterDetails = (state) =>
   selectCharacter(state).characterDetails;
-export const selectCharacterStatus = (state) => selectCharacter(state).status;
+export const selectCharacterDetailsStatus = (state) =>
+  selectCharacter(state).status;
 
 export const characterDetailsReducer = characterDetailsSlice.reducer;

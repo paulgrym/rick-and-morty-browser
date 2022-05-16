@@ -10,6 +10,7 @@ import {
 import { Image, Info, MetaData, Container, Description, Term } from "./styled";
 import { Title } from "../../../common/Title";
 import { Section } from "../../../common/Section";
+import { nanoid } from "@reduxjs/toolkit";
 
 export const CharacterDetails = () => {
   const dispatch = useDispatch();
@@ -42,7 +43,7 @@ export const CharacterDetails = () => {
             <Image src={character.image} />
             <div>
               {metaData.map((data) => (
-                <MetaData>
+                <MetaData key={nanoid()}>
                   <Term>{data.term}:</Term>
                   <Description>{data.description || "unknown"}</Description>
                 </MetaData>

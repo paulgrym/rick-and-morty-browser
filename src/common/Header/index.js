@@ -5,6 +5,7 @@ import {
   StyledLink,
   StyledNavLink,
   RickIcon,
+  Container,
 } from "./styled";
 
 export const Header = () => {
@@ -14,22 +15,26 @@ export const Header = () => {
 
   return (
     <StyledHeader>
-      <div onClick={onLogoClick}>
-        <StyledLink to={"/characters"}>
-          <RickIcon />
-          Rick and Morty Browser
-        </StyledLink>
-      </div>
-      <nav>
-        <List>
-          <ListItem>
-            <StyledNavLink to={"/characters"}>Characters</StyledNavLink>
-          </ListItem>
-          <ListItem>
-            <StyledNavLink to={"/favourite"}>Favourite</StyledNavLink>
-          </ListItem>
-        </List>
-      </nav>
+      <Container>
+        <div onClick={onLogoClick}>
+          <StyledLink to={"/characters"}>
+            <RickIcon />
+            Rick and Morty Browser
+          </StyledLink>
+        </div>
+        <nav>
+          <List>
+            <ListItem>
+              <StyledNavLink to={"/characters"}>Characters</StyledNavLink>
+            </ListItem>
+            <ListItem>
+              <StyledNavLink to={"/favourite-characters"}>
+                Favourite
+              </StyledNavLink>
+            </ListItem>
+          </List>
+        </nav>
+      </Container>
     </StyledHeader>
   );
 };

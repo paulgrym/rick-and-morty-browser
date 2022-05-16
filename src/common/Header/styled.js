@@ -6,14 +6,19 @@ import { ReactComponent as Rick } from "./rick.svg";
 export const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.colors.navigationBackground};
   color: ${({ theme }) => theme.colors.white};
+  padding: 20px;
+`;
+
+export const Container = styled.div`
+  max-width: 1300px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-  grid-gap: 20px 40px;
-  padding: 20px;
+  grid-gap: 16px 40px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.navSmall}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     justify-items: center;
@@ -45,7 +50,7 @@ export const List = styled.ul`
   padding-left: 0px;
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.navSmall}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     justify-content: center;
   }
 `;
@@ -57,7 +62,7 @@ export const ListItem = styled.li`
     margin-right: 20px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.navSmall}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
     &:last-child {
       margin-right: 0;
     }

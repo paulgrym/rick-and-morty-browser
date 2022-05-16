@@ -3,6 +3,8 @@ export const theme = {
     white: "#FFFFFF",
     background: "#F5F5FA",
     title: "#18181B",
+    loader: "#DDDDEE",
+
     black: "#000000",
   },
   breakpoints: {

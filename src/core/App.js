@@ -15,7 +15,7 @@ export const App = () => {
         <Route path="/characters">
           <CharactersList />
         </Route>
-        <Route path="/favourite">
+        <Route path="/favourite-characters">
           <FavouriteCharactersList />
         </Route>
         <Route path="/">

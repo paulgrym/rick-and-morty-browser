@@ -2,6 +2,7 @@ export const theme = {
   colors: {
     white: "#FFFFFF",
     background: "#F5F5FA",
+    term: "#74788B",
     title: "#18181B",
     loader: "#DDDDEE",
     button: "#00740d",
@@ -10,8 +11,8 @@ export const theme = {
     black: "#000000",
   },
   breakpoints: {
-    small: "480px",
-    navSmall: "608px",
+    mobile: "480px",
+    small: "608px",
     medium: "767px",
     large: "1024px",
     extraLarge: "1199px",

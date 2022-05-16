@@ -22,7 +22,7 @@ export const Loader = styled.div`
     border-width: 9px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     margin: 24px auto 16px;
     width: 35px;
     height: 35px;

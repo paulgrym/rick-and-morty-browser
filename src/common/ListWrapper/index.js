@@ -8,7 +8,7 @@ export const ListWrapper = styled.ul`
   grid-gap: 24px;
   margin: 12px auto 40px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

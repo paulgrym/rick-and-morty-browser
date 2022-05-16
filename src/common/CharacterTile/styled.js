@@ -12,7 +12,7 @@ export const ListItem = styled.li`
     transform: scale(1.05);
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     max-width: 200px;
   }
 `;
@@ -33,7 +33,7 @@ export const Title = styled.header`
   margin: 0;
   font-size: 18px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: 16px;
     font-weight: 500;
   }

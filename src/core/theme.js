@@ -4,7 +4,7 @@ export const theme = {
     background: "#F5F5FA",
     title: "#18181B",
     loader: "#DDDDEE",
-
+    button: "#00740d",
     black: "#000000",
   },
   breakpoints: {

@@ -13,7 +13,7 @@ export const ListItem = styled.li`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
-    max-width: 250px;
+    max-width: 200px;
   }
 `;
 
@@ -32,4 +32,9 @@ export const Image = styled.img`
 export const Title = styled.header`
   margin: 0;
   font-size: 18px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.small}) {
+    font-size: 16px;
+    font-weight: 500;
+  }
 `;

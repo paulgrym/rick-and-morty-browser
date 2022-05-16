@@ -10,11 +10,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
-    max-width: 300px;
+    max-width: 250px;
     height: auto;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {

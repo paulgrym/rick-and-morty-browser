@@ -10,7 +10,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const Container = styled.div`
-  max-width: 1300px;
+  max-width: 1104px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: auto auto;

@@ -26,6 +26,7 @@ export const StyledLink = styled(Link)`
   gap: 16px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
 `;
 
 export const Image = styled.img`

@@ -6,18 +6,15 @@ import { Section } from "../../../common/Section";
 import { StatusChecker } from "../../../common/StatusChecker";
 import { Title } from "../../../common/Title";
 import {
-  addCharacterToFavourites,
   fetchCharactersList,
   selectCharactersList,
   selectCharactersListStatus,
-  selectFavouritesCharacters,
 } from "./charactersListSlice";
 
 export const CharactersList = () => {
   const dispatch = useDispatch();
   const characters = useSelector(selectCharactersList);
   const status = useSelector(selectCharactersListStatus);
-  const favouriteCharacters = useSelector(selectFavouritesCharacters);
 
   useEffect(() => {
     dispatch(fetchCharactersList());
@@ -34,13 +31,8 @@ export const CharactersList = () => {
               id={character.id}
               name={character.name}
               image={character.image}
-              onButtonClick={() => {
-                dispatch(addCharacterToFavourites(character));
-              }}
-              content="Add to favourites"
-              isDisabled={favouriteCharacters
-                .map((fav) => fav.id)
-                .includes(character.id)}
+              character={character}
+              addButton
             />
           ))}
         </ListWrapper>

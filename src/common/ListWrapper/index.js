@@ -6,7 +6,7 @@ export const ListWrapper = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(174px, 1fr));
   grid-gap: 24px;
-  margin: 12px auto 40px;
+  margin: 12px auto 12px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     display: flex;

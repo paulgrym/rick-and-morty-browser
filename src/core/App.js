@@ -8,20 +8,22 @@ export const App = () => {
   return (
     <HashRouter>
       <Header />
-      <Switch>
-        <Route path="/characters/:id">
-          <CharacterDetails />
-        </Route>
-        <Route path="/characters">
-          <CharactersList />
-        </Route>
-        <Route path="/favourite-characters">
-          <FavouriteCharactersList />
-        </Route>
-        <Route path="/">
-          <Redirect to="/characters" />
-        </Route>
-      </Switch>
+      <main>
+        <Switch>
+          <Route path="/characters/:id">
+            <CharacterDetails />
+          </Route>
+          <Route path="/characters">
+            <CharactersList />
+          </Route>
+          <Route path="/favourite-characters">
+            <FavouriteCharactersList />
+          </Route>
+          <Route path="/">
+            <Redirect to="/characters" />
+          </Route>
+        </Switch>
+      </main>
     </HashRouter>
   );
 };

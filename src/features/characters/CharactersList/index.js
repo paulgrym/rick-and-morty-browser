@@ -28,23 +28,27 @@ export const CharactersList = () => {
   }, [dispatch, page]);
 
   return (
-    <Section>
-      <StatusChecker status={status}>
-        <Title>Characters</Title>
-        <ListWrapper>
-          {characters.map((character) => (
-            <CharacterTile
-              key={character.id}
-              id={character.id}
-              name={character.name}
-              image={character.image}
-              character={character}
-              addButton
-            />
-          ))}
-        </ListWrapper>
+    <>
+      <Section>
+        <StatusChecker status={status}>
+          <Title>Characters</Title>
+          <ListWrapper>
+            {characters.map((character) => (
+              <CharacterTile
+                key={character.id}
+                id={character.id}
+                name={character.name}
+                image={character.image}
+                character={character}
+                addButton
+              />
+            ))}
+          </ListWrapper>
+        </StatusChecker>
+      </Section>
+      {status === "success" && (
         <Pagination totalPages={totalPages} page={page} />
-      </StatusChecker>
-    </Section>
+      )}
+    </>
   );
 };

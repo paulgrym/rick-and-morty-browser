@@ -5,10 +5,10 @@ export const StyledPagination = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0 0;
+  margin: 40px 0 40px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    margin-top: 32px;
+    margin: 8px 0 32px;
   }
 `;
 

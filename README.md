@@ -1,6 +1,6 @@
 # Rick and Morty Browser
 
-With the use of this app you can browse "Rick and Morty" characters. 
+With this application you can browse the characters of the TV series "Rick and Morty" and add them to your favorite characters list.
 
 Data about characters is taken from an [external API](https://rickandmortyapi.com/).
 

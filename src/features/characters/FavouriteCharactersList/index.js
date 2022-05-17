@@ -3,7 +3,7 @@ import { CharacterTile } from "../../../common/CharacterTile";
 import { ListWrapper } from "../../../common/ListWrapper";
 import { Section } from "../../../common/Section";
 import { Title } from "../../../common/Title";
-import { selectFavouritesCharacters } from "../CharactersList/charactersListSlice";
+import { selectFavouritesCharacters } from "../charactersListSlice";
 
 export const FavouriteCharactersList = () => {
   const favouriteCharacters = useSelector(selectFavouritesCharacters);

@@ -12,7 +12,7 @@ import {
   selectCharactersList,
   selectCharactersListStatus,
   selectTotalPages,
-} from "./charactersListSlice";
+} from "../charactersListSlice";
 
 export const CharactersList = () => {
   const dispatch = useDispatch();

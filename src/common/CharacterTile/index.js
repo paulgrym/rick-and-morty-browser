@@ -5,7 +5,7 @@ import {
   addCharacterToFavourites,
   removeCharacterFromFavourites,
   selectFavouritesCharacters,
-} from "../../features/characters/CharactersList/charactersListSlice";
+} from "../../features/characters/charactersListSlice";
 
 export const CharacterTile = ({ id, name, image, addButton, character }) => {
   const dispatch = useDispatch();

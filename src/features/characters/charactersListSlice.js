@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getFavouritesFromLocaleStorage } from "../favouritesLocalStorage";
+import { getFavouritesFromLocaleStorage } from "./favouritesLocalStorage";
 
 const charactersListSlice = createSlice({
   name: "charactersList",

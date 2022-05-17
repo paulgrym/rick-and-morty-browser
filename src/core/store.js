@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { charactersListReducer } from "../features/characters/CharactersList/charactersListSlice";
+import { charactersListReducer } from "../features/characters/charactersListSlice";
 import { characterDetailsReducer } from "../features/characters/CharacterDetails/characterDetailsSlice";
 import rootSaga from "./rootSaga";
 import createSagaMiddleware from "redux-saga";

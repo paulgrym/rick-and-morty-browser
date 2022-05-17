@@ -6,9 +6,9 @@ import {
   takeEvery,
   select,
 } from "redux-saga/effects";
-import { API_URL } from "../../APIdata";
-import { getAPI } from "../../getAPI";
-import { saveFavouritesInLocalStorage } from "../favouritesLocalStorage";
+import { API_URL } from "../APIdata";
+import { getAPI } from "../getAPI";
+import { saveFavouritesInLocalStorage } from "./favouritesLocalStorage";
 import {
   fetchCharactersList,
   fetchCharactersListError,

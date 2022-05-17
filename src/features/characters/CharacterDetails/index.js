@@ -14,11 +14,10 @@ import { nanoid } from "@reduxjs/toolkit";
 
 export const CharacterDetails = () => {
   const dispatch = useDispatch();
-
-  const { id } = useParams();
-
   const character = useSelector(selectCharacterDetails);
   const status = useSelector(selectCharacterDetailsStatus);
+
+  const { id } = useParams();
 
   useEffect(() => {
     dispatch(fetchCharacterDetails(id));

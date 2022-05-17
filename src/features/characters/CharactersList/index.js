@@ -10,6 +10,7 @@ import {
   fetchCharactersList,
   selectCharactersList,
   selectCharactersListStatus,
+  toggleFav,
 } from "./charactersListSlice";
 
 export const CharactersList = () => {
@@ -32,11 +33,12 @@ export const CharactersList = () => {
               id={character.id}
               name={character.name}
               image={character.image}
-              character={character}
-              onButtonClick={() =>
-                dispatch(addCharacterToFavourites(character))
-              }
+              onButtonClick={() => {
+                dispatch(toggleFav(character.id));
+                dispatch(addCharacterToFavourites({ ...character, fav: true }));
+              }}
               content="Add to favourites"
+              isFav={character.fav}
             />
           ))}
         </ListWrapper>

@@ -22,6 +22,11 @@ export const StyledButton = styled.button`
     filter: brightness(120%);
   }
 
+  &:disabled {
+    color: #c0c0c5;
+    cursor: not-allowed;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoints.large}) {
     font-size: 12px;
   }

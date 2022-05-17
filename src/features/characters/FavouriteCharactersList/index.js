@@ -6,6 +6,7 @@ import { Title } from "../../../common/Title";
 import {
   removeCharacterFromFavourites,
   selectFavouritesCharacters,
+  toggleFav,
 } from "../CharactersList/charactersListSlice";
 
 export const FavouriteCharactersList = () => {
@@ -22,9 +23,10 @@ export const FavouriteCharactersList = () => {
             id={character.id}
             name={character.name}
             image={character.image}
-            onButtonClick={() =>
-              dispatch(removeCharacterFromFavourites(character.id))
-            }
+            onButtonClick={() => {
+              dispatch(toggleFav(character.id));
+              dispatch(removeCharacterFromFavourites(character.id));
+            }}
             content="Remove from favourites"
           />
         ))}

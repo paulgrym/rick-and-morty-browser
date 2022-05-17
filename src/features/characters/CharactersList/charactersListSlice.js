@@ -9,11 +9,15 @@ const charactersListSlice = createSlice({
   },
 
   reducers: {
-    addCharacterToFavourites: (
-      { favouriteCharacters },
-      { payload: character }
-    ) => {
-      favouriteCharacters.push(character);
+    addCharacterToFavourites: (state, { payload: character }) => {
+      state.favouriteCharacters.push(character);
+    },
+
+    toggleFav: ({ charactersList }, { payload: characterId }) => {
+      const index = charactersList.findIndex(
+        (character) => character.id === characterId
+      );
+      charactersList[index].fav = !charactersList[index].fav;
     },
 
     removeCharacterFromFavourites: (
@@ -32,7 +36,7 @@ const charactersListSlice = createSlice({
 
     fetchCharactersListSuccess: (state, { payload: charactersList }) => {
       state.status = "success";
-      state.charactersList = charactersList.results;
+      state.charactersList = charactersList;
     },
 
     fetchCharactersListError: (state) => {
@@ -47,6 +51,7 @@ export const {
   fetchCharactersListError,
   addCharacterToFavourites,
   removeCharacterFromFavourites,
+  toggleFav,
 } = charactersListSlice.actions;
 
 const selectCharacters = (state) => state.charactersList;
@@ -57,5 +62,8 @@ export const selectFavouritesCharacters = (state) =>
   selectCharacters(state).favouriteCharacters;
 export const selectCharactersListStatus = (state) =>
   selectCharacters(state).status;
+
+// export const selectIsCharacterFav = (state, characterId) =>
+//   selectCharactersList(state)[characterId].fav;
 
 export const charactersListReducer = charactersListSlice.reducer;

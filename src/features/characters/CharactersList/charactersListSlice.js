@@ -17,7 +17,9 @@ const charactersListSlice = createSlice({
       const index = state.favouriteCharacters.findIndex(
         (character) => character.id === characterId
       );
-      state.favouriteCharacters.splice(index, 1);
+      if (index !== -1) {
+        state.favouriteCharacters.splice(index, 1);
+      }
     },
 
     fetchCharactersList: (state) => {

@@ -1,10 +1,56 @@
 # Rick and Morty Browser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+With the use of this app you can browse "Rick and Morty" characters. Data about characters is taken from an [external API](https://rickandmortyapi.com/).
+
+## Table od content
+
+- [Demo](#demo)
+- [How to use](#how-to-use)
+- [To do](#to-do)
+- [Technologies](#technologies)
+- [Available scripts](#available-scripts)
 
 ## Demo
 
 You can find a demo [**here**](https://paulgrym.github.io/rick-and-morty-browser/).
+
+## How to use
+
+At the top of the page you can see page's logo and a navigation to a Characters List page and to a Favourite Characters List page.
+
+- Clicking **Logo** will redirect you to main page - **Characters List page**.
+
+- On the **Characters List page** you can look through "Rick and Morty" characters. Each character position includes image, title and two buttons - for adding and removing from "Favourite characters" list. To find out more about the selected character, click on its image or title, and then you will be redirected to a character's subpage. Character can only be added to "Favourite characters" list once - the "add button" will be disabled if the character is already on this list.
+
+- On the **Character subpage**, in addition to the informations from the characters list, you will find character status, species, type, gender, origin and current location.
+
+- On the **Favourite Characters List page** you can look through your favourite characters just like on characters list page - you can click on its image or title to find out more about the character. You can remove character from this list using the delete button on the selected character tile. Favourite characters are saved in Locale Storage.
+
+At the bottom of the page, there is a pagination that allows you to view all character pages.
+
+## To do
+
+- improve "add and remove buttons" styles - change to more subtle icon buttons
+- filter functionality
+- search functionality
+
+## Technologies
+
+- JavaScript (ES6+)
+- React
+- Create-react-app
+- Styled-components
+- CSS (Flex, Grid, media queries)
+- ThemeProvider
+- Redux / Toolkit
+- Redux-Saga
+- React Router
+- Custom Hooks
+- Axios
+- Promises, async/await
+- Local storage
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

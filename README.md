@@ -1,6 +1,8 @@
 # Rick and Morty Browser
 
-With the use of this app you can browse "Rick and Morty" characters. Data about characters is taken from an [external API](https://rickandmortyapi.com/).
+With the use of this app you can browse "Rick and Morty" characters. 
+
+Data about characters is taken from an [external API](https://rickandmortyapi.com/).
 
 ## Table od content
 
@@ -30,9 +32,9 @@ At the bottom of the page, there is a pagination that allows you to view all cha
 
 ## To do
 
-- improve "add and remove buttons" styles - change to more subtle icon buttons
-- filter functionality
-- search functionality
+- [ ] improve "add and remove buttons" styles - change to more subtle icon buttons
+- [ ] filter functionality
+- [ ] search functionality
 
 ## Technologies
 

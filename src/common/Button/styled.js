@@ -7,10 +7,12 @@ export const StyledButton = styled.button`
   font-size: 14px;
   font-weight: 600;
   color: ${({ theme }) => theme.colors.button};
-  border: 2px solid ${({ theme }) => theme.colors.button};
+  border: 2px solid ${({ theme }) => theme.colors.buttonBorder};
+  background: inherit;
   border-radius: 5px;
   margin-top: 16px;
   transition: 0.4s;
+  align-self: center;
 
   &:hover {
     color: ${({ theme }) => theme.colors.white};

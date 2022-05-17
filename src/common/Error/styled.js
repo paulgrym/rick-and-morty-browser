@@ -57,8 +57,8 @@ export const ButtonLink = styled(Link)`
   padding: 16px 24px;
   font-size: 14px;
   font-weight: 600;
-  color: ${({ theme }) => theme.colors.button};
-  border: 2px solid ${({ theme }) => theme.colors.button};
+  color: ${({ theme }) => theme.colors.errorButton};
+  border: 2px solid ${({ theme }) => theme.colors.errorButton};
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -66,7 +66,7 @@ export const ButtonLink = styled(Link)`
 
   &:hover {
     color: ${({ theme }) => theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.button};
+    background-color: ${({ theme }) => theme.colors.errorButton};
     cursor: pointer;
   }
 

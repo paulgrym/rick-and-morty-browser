@@ -12,7 +12,7 @@ export const ListItem = styled.li`
   justify-content: space-between;
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {

@@ -13,6 +13,13 @@ export const theme = {
     navigationHover: "#FCD420",
     navigationBackground: "#18181B",
     black: "#000000",
+    //pagination colors:
+    mystic: "#E4E6F0",
+    waterloo: "#7E839A",
+    mineShaft: "#333333",
+    woodsmoke: "#18181B",
+    pattensBlue: "#D6E4FF",
+    scienceBlue: "#0044CC",
   },
   breakpoints: {
     mobile: "480px",

@@ -23,9 +23,9 @@ export const StyledButton = styled.button`
   }
 
   &:disabled {
-    color: #bbb;
-    background-color: #eee;
-    border-color: #bbb;
+    color: ${({ theme }) => theme.colors.buttonDisabledText};
+    background-color: ${({ theme }) => theme.colors.buttonDisabledBackground};
+    border-color: ${({ theme }) => theme.colors.buttonDisabledText};
     cursor: not-allowed;
   }
 

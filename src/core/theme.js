@@ -6,6 +6,8 @@ export const theme = {
     title: "#18181B",
     loader: "#DDDDEE",
     button: "#00740d",
+    buttonDisabledText: "#bbb",
+    buttonDisabledBackground: "#eee",
     navigationHover: "#FCD420",
     navigationBackground: "#18181B",
     black: "#000000",

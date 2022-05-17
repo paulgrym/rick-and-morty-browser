@@ -7,6 +7,7 @@ const charactersListSlice = createSlice({
     charactersList: [],
     favouriteCharacters: getFavouritesFromLocaleStorage(),
     status: "initial",
+    totalPages: null,
   },
 
   reducers: {
@@ -29,7 +30,8 @@ const charactersListSlice = createSlice({
 
     fetchCharactersListSuccess: (state, { payload: charactersList }) => {
       state.status = "success";
-      state.charactersList = charactersList;
+      state.charactersList = charactersList.results;
+      state.totalPages = charactersList.info.pages;
     },
 
     fetchCharactersListError: (state) => {
@@ -55,5 +57,6 @@ export const selectFavouritesCharacters = (state) =>
   selectCharacters(state).favouriteCharacters;
 export const selectCharactersListStatus = (state) =>
   selectCharacters(state).status;
+export const selectTotalPages = (state) => selectCharacters(state).totalPages;
 
 export const charactersListReducer = charactersListSlice.reducer;

@@ -16,13 +16,12 @@ import {
   selectFavouritesCharacters,
 } from "./charactersListSlice";
 
-function* fetchCharactersListWorker() {
-  const url = `${API_URL}/?page=1`;
+function* fetchCharactersListWorker({ payload: page }) {
+  const url = `${API_URL}/?page=${page}`;
   try {
     yield delay(300);
     const characters = yield call(getAPI, url);
-    const results = characters.results;
-    yield put(fetchCharactersListSuccess(results));
+    yield put(fetchCharactersListSuccess(characters));
   } catch (error) {
     yield put(fetchCharactersListError());
   }

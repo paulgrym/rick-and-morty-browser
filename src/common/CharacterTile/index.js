@@ -7,7 +7,7 @@ export const CharacterTile = ({
   image,
   onButtonClick,
   content,
-  isFav,
+  isDisabled,
 }) => {
   return (
     <ListItem>
@@ -18,7 +18,7 @@ export const CharacterTile = ({
       <Button
         onButtonClick={onButtonClick}
         content={content}
-        disabled={isFav}
+        isDisabled={isDisabled}
       />
     </ListItem>
   );

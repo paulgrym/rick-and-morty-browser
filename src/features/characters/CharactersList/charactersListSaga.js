@@ -13,13 +13,7 @@ function* fetchCharactersListWorker() {
     yield delay(300);
     const characters = yield call(getAPI, url);
     const results = characters.results;
-
-    const charactersWithFav = results.map((character) => ({
-      ...character,
-      fav: false,
-    }));
-
-    yield put(fetchCharactersListSuccess(charactersWithFav));
+    yield put(fetchCharactersListSuccess(results));
   } catch (error) {
     yield put(fetchCharactersListError());
   }

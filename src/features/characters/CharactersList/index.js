@@ -10,13 +10,14 @@ import {
   fetchCharactersList,
   selectCharactersList,
   selectCharactersListStatus,
-  toggleFav,
+  selectFavouritesCharacters,
 } from "./charactersListSlice";
 
 export const CharactersList = () => {
   const dispatch = useDispatch();
   const characters = useSelector(selectCharactersList);
   const status = useSelector(selectCharactersListStatus);
+  const favouriteCharacters = useSelector(selectFavouritesCharacters);
 
   useEffect(() => {
     dispatch(fetchCharactersList());
@@ -34,11 +35,12 @@ export const CharactersList = () => {
               name={character.name}
               image={character.image}
               onButtonClick={() => {
-                dispatch(toggleFav(character.id));
-                dispatch(addCharacterToFavourites({ ...character, fav: true }));
+                dispatch(addCharacterToFavourites(character));
               }}
               content="Add to favourites"
-              isFav={character.fav}
+              isDisabled={favouriteCharacters
+                .map((fav) => fav.id)
+                .includes(character.id)}
             />
           ))}
         </ListWrapper>

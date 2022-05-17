@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getFavouritesFromLocaleStorage } from "../favouritesLocalStorage";
 
 const charactersListSlice = createSlice({
   name: "charactersList",
   initialState: {
     charactersList: [],
-    favouriteCharacters: [],
+    favouriteCharacters: getFavouritesFromLocaleStorage(),
     status: "initial",
   },
 

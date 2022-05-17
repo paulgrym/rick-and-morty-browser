@@ -10,7 +10,7 @@ export const StyledButton = styled.button`
   border: 2px solid ${({ theme }) => theme.colors.button};
   border-radius: 5px;
   margin-top: 16px;
-  transition: 0.7s;
+  transition: 0.4s;
 
   &:hover {
     color: ${({ theme }) => theme.colors.white};
@@ -23,7 +23,9 @@ export const StyledButton = styled.button`
   }
 
   &:disabled {
-    color: #c0c0c5;
+    color: #bbb;
+    background-color: #eee;
+    border-color: #bbb;
     cursor: not-allowed;
   }
 

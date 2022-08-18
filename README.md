@@ -4,6 +4,8 @@ With this application you can browse the characters of the TV series "Rick and M
 
 Data about characters is taken from an [external API](https://rickandmortyapi.com/).
 
+- [ ] implementation of the react-router v6 is on the "router-6" branch - to be merged after the task has been evaluated by the recruiter
+
 ## Table od content
 
 - [Demo](#demo)
